@@ -1,7 +1,12 @@
 package com.ayushidoshi56.fetchgithubapi.model
 
 import com.google.gson.annotations.SerializedName
-
+//1st step
+//Api-> "https://api.github.com/users"
+//Data Class created using RoboPojoMaker
+//Contains all the data and datatype of the information which will be fetched from api
+//Directly made by going through package_name*right click*->New->RoboPojoMaker->select kotlin and gson and change the name of class.
+//Copy paste the json file in the robopojo maker and create it.
 data class ApiResponse(
 
 	@field:SerializedName("gists_url")

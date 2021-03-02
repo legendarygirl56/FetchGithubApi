@@ -28,12 +28,14 @@ class MainActivity2 : AppCompatActivity() {
         val viewModelFactory = MainViewModelFactory2(repository)
         viewModel = ViewModelProvider(this, viewModelFactory).get(MainViewModel2::class.java)
         viewModel.getPostViewModel(login)
+
         Toast.makeText(this,"T",Toast.LENGTH_LONG).show()
         //val text = findViewById<TextView>(R.id.txt1)
+
         viewModel.myResponse.observe(this, Observer { response ->
-            Toast.makeText(this,"HEL",Toast.LENGTH_LONG).show()
-            Log.i("TAG",response.toString())
-                binding.tv.text=response.toString()
+            //Toast.makeText(this,"HEL",Toast.LENGTH_LONG).show()
+            //Log.i("TAG",response.toString())
+            binding.tv.text=response.toString()
         });
     }
 }

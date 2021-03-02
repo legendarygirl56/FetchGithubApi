@@ -9,7 +9,8 @@ import com.ayushidoshi56.fetchgithubapi.databinding.ItemBinding
 import com.ayushidoshi56.fetchgithubapi.model.ApiResponse
 import com.squareup.picasso.Picasso
 
-
+//Create directly by Package*right click*->New->Recycler Adapter->remove 2nd line of template
+//need to make binding at end -> in fun bind()
 class ListAdapter : RecyclerView.Adapter<ListAdapter.ListAdapterViewHolder>() {
     //Data
     var data: MutableList<ApiResponse> = mutableListOf()
@@ -44,6 +45,7 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.ListAdapterViewHolder>() {
             binding.tv1.text=item.login
             binding.tv2.text=item.id.toString()
             Picasso.get().load(item.avatarUrl).into(binding.iv)
+
             setOnClickListener {
                 onItemClick?.invoke(item.login.toString())
             }
